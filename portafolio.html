@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Noto+Sans+KR:wght@100;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAFOLIO</title>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="Oswald">PORTFOLIO</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://drive.google.com/drive/folders/14TN46Ob3ttPDxmpQsD_RcCK0hhr3OVm-?usp=sharing">More</a></li>
+            <li>
+                <a href="contactme.html">Contact</a>
+                <ul>
+                    <li><a onclick="sendEmail()">Email</a></li>
+                    <li><a href="https://www.instagram.com/tripolalalar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==/">Instagram</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="portfolio-section">
+            <h1>Photography</h1>
+            <div class="portfolio-gallery">
+                <img src="portfolio1.jfif" alt="Descripción de la imagen 1">
+                <img src="portfolio2.jfif" alt="Descripción de la imagen 2">
+                <img src="portfolio3.jfif" alt="Descripción de la imagen 3">
+                <img src="portfolio4.jfif" alt="Descripción de la imagen 4">
+                <img src="portfolio5.jfif" alt="Descripción de la imagen 5">
+                <img src="portfolio6.jfif" alt="Descripción de la imagen 6">               
+            </div>
+            <div class="video-container">
+                <h2>Video</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/_-N0XuiK7A4?start=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="illustration-gallery">
+                <h2>Illustration</h2>
+                <img src="ilustracion1.jfif" alt="Ilustración 1">
+                <img src="ilustracion2.jfif" alt="Ilustración 2">
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function sendEmail() {
+            var recipient = "hvanessa096@gmail.com";
+            var subject = "Asunto del correo";
+            var body = "Este es el cuerpo del correo.";
+
+            var mailto_link = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+            window.location.href = mailto_link;
+        }
+    </script>
+
+    <footer>
+        <p>&copy; ( ´ ∀ ` )ﾉ</p>
+    </footer>
+</body>
+</html>

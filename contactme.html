@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Noto+Sans+KR:wght@100;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="Oswald">Tripolalalar</h1>
+        <p>Audiovisual artist</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portafolio.html">Portfolio</a></li>
+            <li><a href="about me.html">About me</a></li>
+            <li><a href="">More</a></li>
+            <li>
+                <a href="">Contact</a>
+                <ul>
+                    <li><a onclick="sendEmail()">Email</a></li>
+                    <li><a href="https://www.instagram.com/tripolalalar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wKsMt5YazE0?si=MsxM8GWHb7EbOIDB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <div class="container">
+            <h1>Buscador de Videos de YouTube</h1>
+            <input type="text" id="searchInput" placeholder="Busca videos en YouTube..." />
+            <button onclick="searchYouTube()">Buscar</button>
+            <div id="videoContainer" class="gif-container"></div>
+        </div>
+    </main>
+
+    <script>
+        // YouTube Data API
+        const API_KEY = 'AIzaSyDZmpROo7aqAfgeDPEG-eD5_lwEUVMUCNw'; // Clave de API de YouTube
+
+        async function searchYouTube() {
+            const query = document.getElementById('searchInput').value;
+            const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${API_KEY}`);
+            const data = await response.json();
+            const videos = data.items;
+
+            const videoContainer = document.getElementById('videoContainer');
+            videoContainer.innerHTML = '';
+
+            videos.forEach(video => {
+                const videoElement = document.createElement('div');
+                videoElement.innerHTML = `
+                    <h3>${video.snippet.title}</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/${video.id.videoId}" title="${video.snippet.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                `;
+                videoContainer.appendChild(videoElement);
+            });
+        }
+
+        function sendEmail() {
+            var recipient = "hvanessa096@gmail.com";
+            var subject = "Asunto del correo";
+            var body = "Este es el cuerpo del correo.";
+
+            var mailto_link = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+            window.location.href = mailto_link;
+        }
+    </script>
+
+    <footer>
+        <p>&copy; ( ´ ∀ ` )ﾉ</p>
+    </footer>
+</body>
+</html>

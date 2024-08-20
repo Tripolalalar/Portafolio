@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Especifica el tipo de documento y la versión de HTML -->
+    <meta charset="UTF-8">
+    <!-- Configura el viewport para que el sitio sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+    <title>Tripolalalar</title>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!-- Sección de encabezado del sitio -->
+    <header>
+        <div class="animate__animated animate__shakeX">
+            <h1 class="Oswald">Tripolalalar</h1>
+        </div>
+        <p>Audiovisual artist </p>
+    </header>
+    <!-- Barra de navegación con enlaces -->
+    <nav>
+        <ul>
+            <li><a href="about me.html">About me</a></li>
+            <li><a href="">More</a></li>
+            <li><a href="portafolio.html">Portfolio</a></li>
+            <li>
+                <a href="">Contact</a>
+                <ul>
+                    <li><a onclick="sendEmail()">Email</a></li>
+                    <li><a href="https://www.instagram.com/tripolalalar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal de la página -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wKsMt5YazE0?si=MsxM8GWHb7EbOIDB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <div class="container">
+        <h1>Buscador de Videos de YouTube</h1>
+        <input type="text" id="searchInput" placeholder="Busca videos en YouTube..." />
+        <button onclick="searchYouTube()">Buscar</button>
+        <div id="videoContainer" class="gif-container"></div>
+    </div>
+    
+    <main>
+        <script>
+            // YouTube Data API
+            const API_KEY = 'AIzaSyDZmpROo7aqAfgeDPEG-eD5_lwEUVMUCNw'; // Clave de API de YouTube
+
+            async function searchYouTube() {
+                const query = document.getElementById('searchInput').value;
+                const response = await fetch

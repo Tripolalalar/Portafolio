@@ -1,0 +1,254 @@
+/* Estilos globales para el cuerpo del documento */
+body {
+    font-family: "Montserrat";
+    margin: 0;
+    padding: 0;
+    background-color: #FFEFEA;
+    text-align: center;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-image: url("fondo.jfif");
+    color: #000000;
+    padding: 1rem 0;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    height: 200px; 
+    text-align: center;
+}
+
+.anton-sc-regular {
+  font-family: "Montserrat", bolt;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: #C67E62;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li ul li {
+    display: block;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 1rem;
+}
+
+/* Estilos para la sección del portafolio */
+.portfolio-section {
+    padding: 2rem;
+    background-color: #fff;
+    margin: 2rem auto;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-section h1 {
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para la galería de imágenes del portafolio */
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.portfolio-gallery img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el contenedor del video */
+.video-container {
+    margin-top: 2rem;
+}
+
+.video-container h2 {
+    margin-bottom: 1rem;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la galería de ilustraciones */
+.illustration-gallery {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    margin-top: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.illustration-gallery h2 {
+    margin-bottom: 1rem;
+}
+
+.illustration-gallery img {
+    max-width: 45%;
+    height: auto;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #C67E62;
+    color: #000000;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.about-section {
+    background: #C67E62;
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.about-section h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.about-section p {
+    line-height: 1.6;
+    color: #fff;
+}
+
+.about-section img {
+    display: block;
+    margin: 20px auto;
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.slider-container {
+    max-width: auto;
+    max-height: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-content {
+    display: flex;
+    transition: transform 1s ease;
+    width: 100%;
+}
+
+.slider-item {
+    flex: 0 0 100%;
+}
+
+.slider-item img {
+    width: 400px;
+    height: 300px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.gif-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gif-container img {
+    margin: 5px;
+    max-width: 100%;
+    height: auto;
+}
